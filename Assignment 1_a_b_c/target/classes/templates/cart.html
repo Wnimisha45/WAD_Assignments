@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - LuxeVogue Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/home.css}" href="css/home.css">
+    <style>
+        :root {
+            --accent: #d4af37;
+            --accent-2: #e63946;
+            --text: #0a0a0a;
+            --muted: #7a7a7a;
+        }
+        body { background: #f5f3f0; }
+        .navbar { background: rgba(255,255,255,0.92)!important; backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-bottom: 1px solid rgba(212,175,55,0.1); }
+        .navbar-brand { background: linear-gradient(135deg, var(--accent) 0%, #f1c232 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .navbar-brand i { font-size: 1.3rem; }
+        .nav-link { position: relative; transition: color 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--accent); transition: width 0.3s ease, left 0.3s ease; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; left: 0; }
+        .page-header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 80px 0; color: white; }
+        .card { background: white; border: 2px solid rgba(212,175,55,0.08); border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+        .card:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.15); border-color: var(--accent); }
+        .btn-dark { background: linear-gradient(135deg, #0a0a0a 0%, #2d2d2d 100%); border: none; box-shadow: 0 8px 24px rgba(10,10,10,0.2); }
+        .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(10,10,10,0.3); }
+        .btn-outline-secondary { border: 2px solid #ddd; font-weight: 600; }
+        .btn-outline-secondary:hover { background: #f5f3f0; }
+        .footer { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); border-top: 1px solid rgba(212,175,55,0.1); }
+        .footer a { color: white; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+        .footer a:hover { color: var(--accent); }
+        img { border-radius: 14px; }
+        .price-summary { font-weight: 700; font-size: 1.1rem; }
+        .price-value { color: var(--accent); font-weight: 900; }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo"><i class="fas fa-gem"></i><span>LuxeVogue</span></div>
+        <ul class="nav-links">
+            <li><a th:href="@{/}" href="index.html">Home</a></li>
+            <li><a th:href="@{/shop}" href="shop.html">Shop</a></li>
+            <li><a th:href="@{/about}" href="about.html">About</a></li>
+            <li><a class="active cart-link" th:href="@{/cart}" href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="page-header text-center">
+  <div class="container">
+    <h1 class="fw-bold display-4">Your cart</h1>
+    <p class="lead" style="color: rgba(255,255,255,0.8);">Review your picks before checkout.</p>
+    <p class="mb-0" style="color: rgba(255,255,255,0.8);">Items in cart: <strong id="cart-items-count">0</strong></p>
+  </div>
+</header>
+
+<main class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="card shadow-sm mb-3">
+          <div class="card-body">
+            <div class="row g-3 align-items-center">
+              <div class="col-md-3">
+                <img id="cart-line-img" class="img-fluid" th:src="@{/images/structured_tote_bag.jpeg}" src="images/structured_tote_bag.jpeg" alt="Structured Tote">
+              </div>
+              <div class="col-md-6">
+                <h5 id="cart-line-name" class="fw-bold">Structured Tote</h5>
+                <p class="text-muted mb-1"><small id="cart-line-desc">Handbags · Vegan leather · Gold hardware</small></p>
+                <div class="d-flex align-items-center gap-2">
+                  <button class="btn btn-outline-secondary btn-sm btn-minus" aria-label="Decrease quantity">−</button>
+                  <strong class="line-qty">0</strong>
+                  <button class="btn btn-dark btn-sm btn-plus" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+              <div class="col-md-3 text-end">
+                <div class="price-value fs-5 line-total">₹0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="fw-bold mb-4">Order summary</h5>
+            <div class="d-flex justify-content-between mb-2"><span class="text-muted">Subtotal</span><span id="summary-subtotal">₹0</span></div>
+            <div class="d-flex justify-content-between mb-2"><span class="text-muted">Shipping</span><span id="summary-shipping">₹0</span></div>
+            <div class="d-flex justify-content-between mb-4 pb-3 border-bottom"><span class="text-muted">Tax</span><span id="summary-tax">₹0</span></div>
+            <div class="d-flex justify-content-between mb-4 price-summary"><span>Total</span><span class="price-value" id="summary-total">₹0</span></div>
+            <button class="btn btn-dark w-100 mb-3 fw-bold py-2">Checkout</button>
+            <a class="btn btn-outline-secondary w-100 fw-bold py-2" th:href="@{/shop}" href="shop.html">Continue shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer py-5 text-white text-center">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <div class="fw-bold fs-5"><i class="fas fa-gem" style="color: var(--accent);"></i> LuxeVogue</div>
+    <div class="d-flex gap-4">
+      <a th:href="@{/}" href="index.html">Home</a>
+      <a th:href="@{/shop}" href="shop.html">Shop</a>
+      <a th:href="@{/about}" href="about.html">About</a>
+    </div>
+    <small style="color: #666;">© 2026 LuxeVogue</small>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/cart.js}" src="js/cart.js"></script>
+</body>
+</html>

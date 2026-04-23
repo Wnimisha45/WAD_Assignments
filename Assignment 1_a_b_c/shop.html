@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeVogue Boutique - Shop</title>
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <div class="logo"><i class="fas fa-gem"></i><span>LuxeVogue</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i><span>Cart</span><span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-head">
+        <div class="container">
+            <p class="eyebrow">Browse</p>
+            <h1>Discover the collection</h1>
+            <p class="muted">Handpicked edits by category, with quick add-to-cart on every product.</p>
+        </div>
+    </header>
+
+    <main class="shop-wrap">
+        <div class="container">
+            <div id="categories-view" class="categories-grid">
+                <a href="handbags.html" class="category-tile">
+                    <img src="images/handbags.jpeg" alt="Handbags">
+                    <h2>Handbags</h2>
+                </a>
+                <a href="#sunglasses" class="category-tile">
+                    <img src="images/sunglasses.jpeg" alt="Sunglasses">
+                    <h2>Sunglasses</h2>
+                </a>
+                <a href="#jewellery" class="category-tile">
+                    <img src="images/jewellry.jpeg" alt="Jewellery">
+                    <h2>Jewellery</h2>
+                </a>
+                <a href="#dresses" class="category-tile">
+                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&h=600&fit=crop" alt="Dresses">
+                    <h2>Dresses</h2>
+                </a>
+                <a href="#heels" class="category-tile">
+                    <img src="images/heels.jpeg" alt="Heels">
+                    <h2>Heels</h2>
+                </a>
+                <a href="#sneakers" class="category-tile">
+                    <img src="images/sneaker.jpeg" alt="Sneakers">
+                    <h2>Sneakers</h2>
+                </a>
+            </div>
+
+            <div class="products-view">
+                <a href="#" class="back-btn"><i class="fas fa-arrow-left"></i> Back to categories</a>
+
+                <section id="handbags" class="category-section">
+                    <h2>Handbags</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <img src="images/structured_tote_bag.jpeg" alt="Structured Tote">
+                            <div class="info">
+                                <h3>Structured Tote</h3>
+                                <p class="muted">Pebbled vegan leather, gold hardware.</p>
+                                <div class="price-add">
+                                    <span class="price">₹249</span>
+                                    <button class="btn-add" data-product="Structured Tote" data-price="249" data-img="images/structured_tote_bag.jpeg" data-desc="Handbags · Vegan leather · Gold hardware">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/mini_cross_body.jpeg" alt="Mini Crossbody">
+                            <div class="info">
+                                <h3>Mini Crossbody</h3>
+                                <p class="muted">Compact silhouette with chain strap.</p>
+                                <div class="price-add">
+                                    <span class="price">₹189</span>
+                                    <button class="btn-add" data-product="Mini Crossbody" data-price="189" data-img="images/mini_cross_body.jpeg" data-desc="Handbags · Chain strap · Compact silhouette">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/soft_shoulder_bag.jpeg" alt="Soft Shoulder Bag">
+                            <div class="info">
+                                <h3>Soft Shoulder Bag</h3>
+                                <p class="muted">Butter-soft finish with foldover flap.</p>
+                                <div class="price-add">
+                                    <span class="price">₹210</span>
+                                    <button class="btn-add" data-product="Soft Shoulder Bag" data-price="210" data-img="images/soft_shoulder_bag.jpeg" data-desc="Handbags · Soft leather · Foldover flap">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="sunglasses" class="category-section">
+                    <h2>Sunglasses</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <img src="images/sunglasses.jpeg" alt="Aviator Classic">
+                            <div class="info">
+                                <h3>Aviator Classic</h3>
+                                <p class="muted">Slim metal frame with UV400 lenses.</p>
+                                <div class="price-add">
+                                    <span class="price">$129</span>
+                                    <button class="btn-add" data-product="Aviator Classic" data-price="129" data-img="images/sunglasses.jpeg" data-desc="Sunglasses · Slim metal frame · UV400 lenses">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/sunglasses.jpeg" alt="Round Acetate">
+                            <div class="info">
+                                <h3>Round Acetate</h3>
+                                <p class="muted">Bold acetate with warm tint lenses.</p>
+                                <div class="price-add">
+                                    <span class="price">$115</span>
+                                    <button class="btn-add" data-product="Round Acetate" data-price="115" data-img="images/sunglasses.jpeg" data-desc="Sunglasses · Bold acetate · Warm tint lenses">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/sunglasses.jpeg" alt="Oversized Shield">
+                            <div class="info">
+                                <h3>Oversized Shield</h3>
+                                <p class="muted">Gradient lens with sculpted temple.</p>
+                                <div class="price-add">
+                                    <span class="price">$149</span>
+                                    <button class="btn-add" data-product="Oversized Shield" data-price="149" data-img="images/sunglasses.jpeg" data-desc="Sunglasses · Gradient lens · Sculpted temple">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="jewellery" class="category-section">
+                    <h2>Jewellery</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <img src="images/jewellry.jpeg" alt="Pearl Necklace">
+                            <div class="info">
+                                <h3>Pearl Necklace</h3>
+                                <p class="muted">Freshwater pearls with gold clasp.</p>
+                                <div class="price-add">
+                                    <span class="price">$320</span>
+                                    <button class="btn-add" data-product="Pearl Necklace" data-price="320" data-img="images/jewellry.jpeg" data-desc="Jewellery · Freshwater pearls · Gold clasp">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/jewellry.jpeg" alt="Hoop Earrings">
+                            <div class="info">
+                                <h3>Hoop Earrings</h3>
+                                <p class="muted">Gold vermeil hoops with secure latch.</p>
+                                <div class="price-add">
+                                    <span class="price">$140</span>
+                                    <button class="btn-add" data-product="Hoop Earrings" data-price="140" data-img="images/jewellry.jpeg" data-desc="Jewellery · Gold vermeil · Secure latch">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/jewellry.jpeg" alt="Layered Bracelets">
+                            <div class="info">
+                                <h3>Layered Bracelets</h3>
+                                <p class="muted">Mixed metal stack with subtle shine.</p>
+                                <div class="price-add">
+                                    <span class="price">$110</span>
+                                    <button class="btn-add" data-product="Layered Bracelets" data-price="110" data-img="images/jewellry.jpeg" data-desc="Jewellery · Mixed metal · Subtle shine">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="dresses" class="category-section">
+                    <h2>Dresses</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop" alt="Silk Evening Dress">
+                            <div class="info">
+                                <h3>Silk Evening Dress</h3>
+                                <p class="muted">Bias-cut silk with low back detail.</p>
+                                <div class="price-add">
+                                    <span class="price">$299</span>
+                                    <button class="btn-add" data-product="Silk Evening Dress" data-price="299" data-img="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=400&h=500&fit=crop" data-desc="Dresses · Bias-cut silk · Low back detail">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=500&fit=crop" alt="Day Midi Dress">
+                            <div class="info">
+                                <h3>Day Midi Dress</h3>
+                                <p class="muted">Soft drape with cinched waist.</p>
+                                <div class="price-add">
+                                    <span class="price">$149</span>
+                                    <button class="btn-add" data-product="Day Midi Dress" data-price="149" data-img="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=500&fit=crop" data-desc="Dresses · Soft drape · Cinched waist">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&h=500&fit=crop" alt="Cocktail Dress">
+                            <div class="info">
+                                <h3>Cocktail Dress</h3>
+                                <p class="muted">Structured shoulder with sleek fit.</p>
+                                <div class="price-add">
+                                    <span class="price">$189</span>
+                                    <button class="btn-add" data-product="Cocktail Dress" data-price="189" data-img="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=400&h=500&fit=crop" data-desc="Dresses · Structured shoulder · Sleek fit">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="heels" class="category-section">
+                    <h2>Heels</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <img src="images/heels.jpeg" alt="Stiletto Heel">
+                            <div class="info">
+                                <h3>Stiletto Heel</h3>
+                                <p class="muted">Pointed toe with lacquered finish.</p>
+                                <div class="price-add">
+                                    <span class="price">$230</span>
+                                    <button class="btn-add" data-product="Stiletto Heel" data-price="230" data-img="images/heels.jpeg" data-desc="Heels · Pointed toe · Lacquered finish">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/heels.jpeg" alt="Block Heel Mule">
+                            <div class="info">
+                                <h3>Block Heel Mule</h3>
+                                <p class="muted">Stable block heel with soft strap.</p>
+                                <div class="price-add">
+                                    <span class="price">$175</span>
+                                    <button class="btn-add" data-product="Block Heel Mule" data-price="175" data-img="images/heels.jpeg" data-desc="Heels · Stable block heel · Soft strap">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/heels.jpeg" alt="Platform Sandal">
+                            <div class="info">
+                                <h3>Platform Sandal</h3>
+                                <p class="muted">Sculpted sole with ankle strap.</p>
+                                <div class="price-add">
+                                    <span class="price">$195</span>
+                                    <button class="btn-add" data-product="Platform Sandal" data-price="195" data-img="images/heels.jpeg" data-desc="Heels · Sculpted sole · Ankle strap">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section id="sneakers" class="category-section">
+                    <h2>Sneakers</h2>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <img src="images/sneaker.jpeg" alt="Minimal Trainer">
+                            <div class="info">
+                                <h3>Minimal Trainer</h3>
+                                <p class="muted">Clean leather upper with tonal sole.</p>
+                                <div class="price-add">
+                                    <span class="price">$160</span>
+                                    <button class="btn-add" data-product="Minimal Trainer" data-price="160" data-img="images/sneaker.jpeg" data-desc="Sneakers · Clean leather upper · Tonal sole">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/sneaker.jpeg" alt="Chunky Runner">
+                            <div class="info">
+                                <h3>Chunky Runner</h3>
+                                <p class="muted">Layered upper with cushioned midsole.</p>
+                                <div class="price-add">
+                                    <span class="price">$175</span>
+                                    <button class="btn-add" data-product="Chunky Runner" data-price="175" data-img="images/sneaker.jpeg" data-desc="Sneakers · Layered upper · Cushioned midsole">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <img src="images/sneaker.jpeg" alt="Canvas Low">
+                            <div class="info">
+                                <h3>Canvas Low</h3>
+                                <p class="muted">Breathable canvas with rubber toe.</p>
+                                <div class="price-add">
+                                    <span class="price">$98</span>
+                                    <button class="btn-add" data-product="Canvas Low" data-price="98" data-img="images/sneaker.jpeg" data-desc="Sneakers · Breathable canvas · Rubber toe">Add to cart</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="logo"><i class="fas fa-gem"></i><span>LuxeVogue</span></div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>

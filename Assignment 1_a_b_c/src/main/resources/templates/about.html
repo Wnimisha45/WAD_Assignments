@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - LuxeVogue Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" th:href="@{/css/home.css}" href="css/home.css">
+    <style>
+        :root {
+            --accent: #d4af37;
+            --accent-2: #e63946;
+            --text: #0a0a0a;
+            --muted: #7a7a7a;
+        }
+        body { background: #f5f3f0; }
+        .navbar { background: rgba(255,255,255,0.92)!important; backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.06); border-bottom: 1px solid rgba(212,175,55,0.1); }
+        .navbar-brand { background: linear-gradient(135deg, var(--accent) 0%, #f1c232 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .navbar-brand i { font-size: 1.3rem; }
+        .nav-link { position: relative; transition: color 0.3s ease; }
+        .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 50%; width: 0; height: 2px; background: var(--accent); transition: width 0.3s ease, left 0.3s ease; }
+        .nav-link:hover::after, .nav-link.active::after { width: 100%; left: 0; }
+        .page-header { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 80px 0; color: white; }
+        .page-header p { color: rgba(255,255,255,0.8); }
+        .card { background: white; border: 2px solid rgba(212,175,55,0.08); border-radius: 18px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,0.15); border-color: var(--accent); }
+        .card i { color: var(--accent); font-size: 2rem; margin-bottom: 12px; }
+        .card.accent-2 i { color: var(--accent-2); }
+        .btn-dark { background: linear-gradient(135deg, #0a0a0a 0%, #2d2d2d 100%); border: none; box-shadow: 0 8px 24px rgba(10,10,10,0.2); }
+        .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(10,10,10,0.3); }
+        .footer { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%); border-top: 1px solid rgba(212,175,55,0.1); }
+        .footer a { color: white; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+        .footer a:hover { color: var(--accent); }
+        img { border-radius: 20px; }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <div class="container nav-inner">
+        <div class="logo"><i class="fas fa-gem"></i><span>LuxeVogue</span></div>
+        <ul class="nav-links">
+            <li><a th:href="@{/}" href="index.html">Home</a></li>
+            <li><a th:href="@{/shop}" href="shop.html">Shop</a></li>
+            <li><a class="active" th:href="@{/about}" href="about.html">About</a></li>
+            <li><a th:href="@{/cart}" href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+<header class="page-header text-center">
+  <div class="container">
+    <p class="text-uppercase mb-2 small fw-bold">Our story</p>
+    <h1 class="fw-bold display-4 mb-3">Designed for modern luxury</h1>
+    <p class="lead">A boutique curated with statement pieces, crafted responsibly for the modern collector.</p>
+  </div>
+</header>
+
+<main class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center mb-5">
+      <div class="col-lg-6">
+        <img class="img-fluid shadow-lg" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=900&h=700&fit=crop" alt="Studio">
+      </div>
+      <div class="col-lg-6">
+        <p class="text-uppercase small fw-bold" style="color: var(--accent);">Who we are</p>
+        <h2 class="fw-bold mb-3" style="font-size: 2.2rem;">Craft, curation, care</h2>
+        <p class="text-muted fs-5 mb-4">We partner with makers who value detail and sustainability. From handbags to jewellery, every piece is selected to blend longevity with statement design.</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Responsible materials and limited runs</li>
+          <li class="mb-2"><i class="fas fa-check-circle" style="color: var(--accent);"></i> Artisan craftsmanship with modern silhouettes</li>
+          <li><i class="fas fa-check-circle" style="color: var(--accent);"></i> Dedicated support for styling and fit</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-leaf"></i>
+            <h5 class="mt-3 fw-bold">Sustainable choices</h5>
+            <p class="text-muted">Vegan leather options, recycled metals, and mindful packaging.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 accent-2">
+          <div class="card-body text-center">
+            <i class="fas fa-gem"></i>
+            <h5 class="mt-3 fw-bold">Curated edits</h5>
+            <p class="text-muted">Seasonal drops across handbags, sunglasses, dresses, heels, sneakers, and jewellery.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-headset"></i>
+            <h5 class="mt-3 fw-bold">Concierge support</h5>
+            <p class="text-muted">Styling guidance and fit help across all categories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-dark text-white rounded-3 p-5 text-center">
+      <h3 class="fw-bold mb-3">Ready to explore?</h3>
+      <p class="mb-4">Browse our curated collection of luxury pieces.</p>
+      <a class="btn btn-dark" th:href="@{/shop}" href="shop.html">Shop now</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer py-5 text-white text-center">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+    <div class="fw-bold fs-5"><i class="fas fa-gem" style="color: var(--accent);"></i> LuxeVogue</div>
+    <div class="d-flex gap-4">
+      <a th:href="@{/}" href="index.html">Home</a>
+      <a th:href="@{/shop}" href="shop.html">Shop</a>
+      <a th:href="@{/cart}" href="cart.html">Cart</a>
+    </div>
+    <small style="color: #666;">© 2026 LuxeVogue</small>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script th:src="@{/js/cart.js}" src="js/cart.js"></script>
+</body>
+</html>

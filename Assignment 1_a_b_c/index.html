@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeVogue Boutique - Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <div class="logo"><i class="fas fa-gem"></i><span>LuxeVogue</span></div>
+            <ul class="nav-links">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i><span>Cart</span><span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <span class="eyebrow">Shop by trend</span>
+                <h1>Your wardrobe, one click away</h1>
+                <p>Browse best sellers, add to cart instantly, and shop curated luxury pieces with fast delivery.</p>
+                <div class="hero-actions">
+                    <a class="btn primary" href="shop.html">Shop now</a>
+                    <a class="btn ghost" href="#categories">Browse categories</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=640&h=820&fit=crop" alt="Online shopping">
+                    <div class="tag">Best sellers</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="deal-banner">
+            <div class="container deal-inner">
+                <div>
+                    <p class="eyebrow">Limited time</p>
+                    <h2>Mid‑season sale</h2>
+                    <p class="muted">Save up to 30% on handbags and jewellery this week.</p>
+                </div>
+                <a class="btn primary" href="shop.html">Shop deals</a>
+            </div>
+        </section>
+        <section class="promo-strip">
+            <div class="container promo-grid">
+                <div class="promo-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <div>
+                        <strong>Free shipping</strong>
+                        <p>On orders over ₹999</p>
+                    </div>
+                </div>
+                <div class="promo-item">
+                    <i class="fas fa-rotate"></i>
+                    <div>
+                        <strong>Easy returns</strong>
+                        <p>7‑day hassle‑free policy</p>
+                    </div>
+                </div>
+                <div class="promo-item">
+                    <i class="fas fa-lock"></i>
+                    <div>
+                        <strong>Secure checkout</strong>
+                        <p>Trusted payment partners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="category-section">
+            <div class="container section-head">
+                <div>
+                    <p class="eyebrow">Shop by category</p>
+                    <h2>Essential edits</h2>
+                </div>
+                <a class="link" href="shop.html">View all products</a>
+            </div>
+            <div class="container category-grid">
+                <a class="category-card" href="shop.html#handbags">
+                    <div class="cat-icon"><i class="fas fa-bag-shopping"></i></div>
+                    <h3>Handbags</h3>
+                    <p>Structured totes and mini silhouettes.</p>
+                </a>
+                <a class="category-card" href="shop.html#sunglasses">
+                    <div class="cat-icon"><i class="fas fa-glasses"></i></div>
+                    <h3>Sunglasses</h3>
+                    <p>Aviator, round, and bold acetate frames.</p>
+                </a>
+                <a class="category-card" href="shop.html#jewellery">
+                    <div class="cat-icon"><i class="fas fa-gem"></i></div>
+                    <h3>Jewellery</h3>
+                    <p>Gold finishes, pearls, and modern chains.</p>
+                </a>
+                <a class="category-card" href="shop.html#dresses">
+                    <div class="cat-icon"><i class="fas fa-shirt"></i></div>
+                    <h3>Dresses</h3>
+                    <p>Evening, cocktail, and day-ready looks.</p>
+                </a>
+                <a class="category-card" href="shop.html#heels">
+                    <div class="cat-icon"><i class="fas fa-shoe-prints"></i></div>
+                    <h3>Heels</h3>
+                    <p>Stilettos, block heels, and platforms.</p>
+                </a>
+                <a class="category-card" href="shop.html#sneakers">
+                    <div class="cat-icon"><i class="fas fa-person-running"></i></div>
+                    <h3>Sneakers</h3>
+                    <p>Minimal trainers to chunky street styles.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container section-head">
+                <div>
+                    <p class="eyebrow">Trending now</p>
+                    <h2>Featured products</h2>
+                </div>
+                <a class="link" href="shop.html">See all</a>
+            </div>
+            <div class="container product-grid">
+                <article class="product-card">
+                    <img src="images/structured_tote_bag.jpeg" alt="Structured Tote">
+                    <div class="product-info">
+                        <h3>Structured Tote</h3>
+                        <p class="muted">Vegan leather · Gold hardware</p>
+                        <div class="product-meta">
+                            <span class="price">₹249</span>
+                            <button class="btn primary btn-add" data-product="Structured Tote" data-price="249" data-img="images/structured_tote_bag.jpeg" data-desc="Handbags · Vegan leather · Gold hardware">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/mini_cross_body.jpeg" alt="Mini Crossbody">
+                    <div class="product-info">
+                        <h3>Mini Crossbody</h3>
+                        <p class="muted">Chain strap · Compact silhouette</p>
+                        <div class="product-meta">
+                            <span class="price">₹189</span>
+                            <button class="btn primary btn-add" data-product="Mini Crossbody" data-price="189" data-img="images/mini_cross_body.jpeg" data-desc="Handbags · Chain strap · Compact silhouette">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/sunglasses.jpeg" alt="Aviator Classic">
+                    <div class="product-info">
+                        <h3>Aviator Classic</h3>
+                        <p class="muted">Metal frame · UV400 lenses</p>
+                        <div class="product-meta">
+                            <span class="price">₹129</span>
+                            <button class="btn primary btn-add" data-product="Aviator Classic" data-price="129" data-img="images/sunglasses.jpeg" data-desc="Sunglasses · Metal frame · UV400 lenses">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/jewellry.jpeg" alt="Pearl Necklace">
+                    <div class="product-info">
+                        <h3>Pearl Necklace</h3>
+                        <p class="muted">Freshwater pearls · Gold clasp</p>
+                        <div class="product-meta">
+                            <span class="price">₹320</span>
+                            <button class="btn primary btn-add" data-product="Pearl Necklace" data-price="320" data-img="images/jewellry.jpeg" data-desc="Jewellery · Freshwater pearls · Gold clasp">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="featured-section">
+            <div class="container section-head">
+                <div>
+                    <p class="eyebrow">Best sellers</p>
+                    <h2>Customer favorites</h2>
+                </div>
+                <a class="link" href="shop.html#handbags">Shop best sellers</a>
+            </div>
+            <div class="container product-grid">
+                <article class="product-card">
+                    <img src="images/soft_shoulder_bag.jpeg" alt="Soft Shoulder Bag">
+                    <div class="product-info">
+                        <h3>Soft Shoulder Bag</h3>
+                        <p class="muted">Soft leather · Foldover flap</p>
+                        <div class="product-meta">
+                            <span class="price">₹210</span>
+                            <button class="btn primary btn-add" data-product="Soft Shoulder Bag" data-price="210" data-img="images/soft_shoulder_bag.jpeg" data-desc="Handbags · Soft leather · Foldover flap">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/heels.jpeg" alt="Stiletto Heel">
+                    <div class="product-info">
+                        <h3>Stiletto Heel</h3>
+                        <p class="muted">Pointed toe · Lacquered finish</p>
+                        <div class="product-meta">
+                            <span class="price">₹230</span>
+                            <button class="btn primary btn-add" data-product="Stiletto Heel" data-price="230" data-img="images/heels.jpeg" data-desc="Heels · Pointed toe · Lacquered finish">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/handbags.jpeg" alt="Weekend Duffel">
+                    <div class="product-info">
+                        <h3>Weekend Duffel</h3>
+                        <p class="muted">Canvas blend · Shoulder strap</p>
+                        <div class="product-meta">
+                            <span class="price">₹275</span>
+                            <button class="btn primary btn-add" data-product="Weekend Duffel" data-price="275" data-img="images/weekend_duffel.jpeg" data-desc="Handbags · Canvas blend · Shoulder strap">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/sneaker.jpeg" alt="Minimal Trainer">
+                    <div class="product-info">
+                        <h3>Minimal Trainer</h3>
+                        <p class="muted">Clean leather · Tonal sole</p>
+                        <div class="product-meta">
+                            <span class="price">₹160</span>
+                            <button class="btn primary btn-add" data-product="Minimal Trainer" data-price="160" data-img="images/sneaker.jpeg" data-desc="Sneakers · Clean leather · Tonal sole">Add to cart</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="split">
+            <div class="container split-grid">
+                <div class="split-card">
+                    <p class="eyebrow">Filters & basics</p>
+                    <h3>Find your piece faster</h3>
+                    <ul class="bullet-list">
+                        <li>Category tags for quick jumps</li>
+                        <li>Price and material hints in product cards</li>
+                        <li>Static sidebar filters on the shop page</li>
+                    </ul>
+                    <a class="btn primary" href="shop.html">Open shop</a>
+                </div>
+                <div class="split-card alt">
+                    <p class="eyebrow">Add to cart</p>
+                    <h3>Every product has a quick add</h3>
+                    <p>Tap “Add to cart” on any product in the category pages. No scripts needed.</p>
+                    <a class="btn ghost" href="cart.html">View cart</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container newsletter-card">
+                <div>
+                    <p class="eyebrow">Stay in the loop</p>
+                    <h3>Get new drops and offers</h3>
+                    <p class="muted">Join the LuxeVogue list for early access and exclusive discounts.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email address" required>
+                    <button class="btn primary" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo"><i class="fas fa-gem"></i><span>LuxeVogue</span></div>
+                <p class="muted">Curated boutique finds crafted for everyday luxury.</p>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+        <p class="copyright">© 2026 LuxeVogue</p>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>
