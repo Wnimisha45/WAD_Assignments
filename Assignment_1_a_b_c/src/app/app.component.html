@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <a class="nav-brand" routerLink="/">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L2 7l10 5 10-5-10-5z" />
+      <path d="M2 17l10 5 10-5" />
+      <path d="M2 12l10 5 10-5" />
+    </svg>
+    IdentiFi
+  </a>
+
+  <div class="nav-links">
+    <a routerLink="/users" routerLinkActive="active" class="nav-link">All Users</a>
+
+    <ng-container *ngIf="!authService.isLoggedIn()">
+      <a routerLink="/login" routerLinkActive="active" class="nav-link">Sign In</a>
+      <a routerLink="/register" routerLinkActive="active" class="nav-link btn-nav">Sign Up</a>
+    </ng-container>
+
+    <ng-container *ngIf="authService.isLoggedIn()">
+      <a routerLink="/profile" routerLinkActive="active" class="nav-link">Profile</a>
+      <a class="nav-link btn-nav btn-logout-nav" (click)="logout()">Sign Out</a>
+    </ng-container>
+  </div>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
