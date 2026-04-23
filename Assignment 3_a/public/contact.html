@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">TechFlow</div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Let's start a conversation!</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="about-content">
+            <h2>Get In Touch</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 1rem;">
+                <div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">📍 Address</h3>
+                    <p>123 Tech Street<br>San Francisco, CA 94107<br>United States</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">📞 Phone</h3>
+                    <p>Main Office: +1 (555) 123-4567<br>Support: +1 (555) 123-8901<br>Fax: +1 (555) 123-4568</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">📧 Email</h3>
+                    <p>General: info@techflow.com<br>Support: support@techflow.com<br>Sales: sales@techflow.com</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">🕐 Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="about-content">
+            <h2>Send us a Message</h2>
+            <div class="success-message" style="display: none;"></div>
+            <div class="error-message" style="display: none;"></div>
+            
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Your Company Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="service">Service Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="partnership">Partnership</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" placeholder="Tell us more about your project or inquiry..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label style="display: flex; align-items: center;">
+                        <input type="checkbox" name="terms" style="width: auto; margin-right: 0.5rem;" required>
+                        <span>I agree to the <a href="#" style="color: var(--primary-color);">Terms & Conditions</a></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="about-content">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div style="background: var(--background-white); padding: 1rem; margin: 1rem 0; border-radius: 5px; border-left: 4px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Q: What is your response time?</h3>
+                <p>A: We typically respond to inquiries within 24 hours during business days.</p>
+            </div>
+
+            <div style="background: var(--background-white); padding: 1rem; margin: 1rem 0; border-radius: 5px; border-left: 4px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Q: Do you offer free consultations?</h3>
+                <p>A: Yes! We offer free initial consultations to understand your project needs and provide recommendations.</p>
+            </div>
+
+            <div style="background: var(--background-white); padding: 1rem; margin: 1rem 0; border-radius: 5px; border-left: 4px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Q: What payment methods do you accept?</h3>
+                <p>A: We accept credit cards, bank transfers, and checks. We also offer flexible payment plans for larger projects.</p>
+            </div>
+
+            <div style="background: var(--background-white); padding: 1rem; margin: 1rem 0; border-radius: 5px; border-left: 4px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Q: Do you provide ongoing support after project completion?</h3>
+                <p>A: Absolutely! All projects include support and maintenance. We offer various support packages to fit your needs.</p>
+            </div>
+
+            <div style="background: var(--background-white); padding: 1rem; margin: 1rem 0; border-radius: 5px; border-left: 4px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Q: How long does a typical project take?</h3>
+                <p>A: Project timelines vary based on complexity. We'll provide a detailed timeline during the initial consultation.</p>
+            </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="about-content" style="text-align: center;">
+            <h2>Follow Us On Social Media</h2>
+            <div style="font-size: 2rem; margin-top: 1rem;">
+                <a href="#" style="text-decoration: none; color: var(--primary-color); margin: 0 1rem;">📘 Facebook</a>
+                <a href="#" style="text-decoration: none; color: var(--primary-color); margin: 0 1rem;">🐦 Twitter</a>
+                <a href="#" style="text-decoration: none; color: var(--primary-color); margin: 0 1rem;">💼 LinkedIn</a>
+                <a href="#" style="text-decoration: none; color: var(--primary-color); margin: 0 1rem;">📷 Instagram</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About</h4>
+                <p>TechFlow is a leading web development company dedicated to creating exceptional digital experiences.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@techflow.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Tech Street, San Francisco, CA 94107</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 TechFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

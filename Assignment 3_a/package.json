@@ -1,0 +1,22 @@
+{
+  "name": "static-web-server",
+  "version": "1.0.0",
+  "description": "A professional static web server using Node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "web-server",
+    "http",
+    "static",
+    "file-server"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
